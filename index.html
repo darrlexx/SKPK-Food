@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SKPK FOOD</title> 
+    </head>
+    <body>
+        <div id="produk">
+
+        </div>
+        <script src="database.js"></script>
+
+        <script type="text/javascript">
+            let hasil="";
+            for (index in menu) {
+                hasil += "<img src= '"+menu[index].foto+"''><br>";
+                hasil += "<h1>"+menu[index].nama+"</h1><br>";
+                hasil += "<h2>"+menu[index].harga+"</h2><br>";
+                hasil += "<button onclick='myalert()'>Tambahkan ke Keranjang</button><br><br>";
+                            function myalert() {
+                                alert("Accepted"); }
+            };
+            document.getElementById("produk").innerHTML = hasil;
+        </script>
+    </body>
+</html>
